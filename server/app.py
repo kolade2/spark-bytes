@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 from twilio.rest import Client
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def home():
     return 'Hello, World!'
 
 # # Your Account SID from twilio.com/console
