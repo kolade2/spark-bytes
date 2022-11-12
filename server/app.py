@@ -1,17 +1,20 @@
 from flask import Flask, render_template
 from twilio.rest import Client
 
-app = Flask(__name__)
+
+app = Flask(__name__,template_folder='../client/templates')
 
 
 @app.route('/')
-def home():
+def index():
     return 'Hello, World!'
 
-# # Your Account SID from twilio.com/console
-# account_sid = "AC094bc9651cf72d8d19434194b5f638b7"
-# # Your Auth Token from twilio.com/console
-# auth_token  = "3ee1da683abae91d2fee555033c331e3"
+
+@app.route('/landing')
+def landing():
+    return render_template('landing.html')
+
+client = Client(account_sid, auth_token)
 
 # client = Client(account_sid, auth_token)
 
@@ -22,5 +25,5 @@ def home():
 #         body=text)  
 #     # print(message.sid)
 
-# sendMessage("2018381407","working")
+sendMessage("2018381407","working")
 
