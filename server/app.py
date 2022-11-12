@@ -1,21 +1,21 @@
-from flask import Flask
+from flask import Flask, render_template
 from twilio.rest import Client
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def home():
     return 'Hello, World!'
 
 client = Client(account_sid, auth_token)
 
 def sendMessage(number,text):
     message = client.messages.create(
-        to="+1" + number, #assume all numbers are US based
+        to="+1" +number, #assume all numbers are US based
         from_="+14782495437", #automatic twilio number
         body=text)  
-    # print(message.sid)
+    print(message.sid)
 
-sendMessage("2018381407","working")
+# sendMessage("2018381407","working")
 
