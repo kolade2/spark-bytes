@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="loginScreen">
+        <button id="login">Sign in with Google</button>
+    </div>
+
+    <div class="logout">
+        <button id="logout">Logout</button>
+    </div>
+    
+    <script>
+        import { initializeApp } from "firebase/app";
+ 
+        import { getAuth } from "firebase/auth";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDC16lfx0DtZx4X8ek8cobofwWDWFRGABU",
+            authDomain: "spark-52441.firebaseapp.com",
+            projectId: "spark-52441",
+            storageBucket: "spark-52441.appspot.com",
+            messagingSenderId: "65614097291",
+            appId: "1:65614097291:web:95423e7a62ad6ce06e1d8e",
+            measurementId: "G-NHZ8Y9TVBR"
+        };
+
+        const app = initializeApp(firebaseConfig);
+
+        document.getElementById('login').addEventListener('click', GoogleLogin)
+        document.getElementById('logout').addEventListener('click', LogoutUser)
+        const auth = getAuth(app);
+
+        let provider = new firebase.auth.GoogleAuthProvider()
+        function GoogleLogin(){
+            console.log('Login Btn')
+            firebase.auth().signInWithPopup(provider).then(res=>{
+                console.log(res)
+            }).catch(e=>{
+                console.log(e)
+            })
+        }
+
+        function LogoutUser(){
+            console.log('Logout Btn')
+        }
+    </script>
+</body>
+<script src="script.js"></script>
+
+</html>

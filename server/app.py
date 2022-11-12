@@ -14,7 +14,7 @@ def index():
 def landing():
     return render_template('landing.html')
 
-client = Client(account_sid, auth_token)
+# client = Client(account_sid, auth_token)
 
 # client = Client(account_sid, auth_token)
 
@@ -25,5 +25,5 @@ client = Client(account_sid, auth_token)
 #         body=text)  
 #     # print(message.sid)
 
-sendMessage("2018381407","working")
+# sendMessage("2018381407","working")
 
