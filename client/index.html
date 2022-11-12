@@ -15,10 +15,20 @@
         <h1 class="title">Spark Byte</h1>
         <form class="food-form">
             <div class="error-message"></div>
-            <label for="location">Location of Food</label>
-            <input class="form-box" id="form-location" type="text " id="location " name="location  " required />
+            <label for="location">Location Of Food</label>
+            <select location="Locations" id="locations">
+          <option value="MCS Basement">
+            Basement (111 Cummington Mall, Basement)
+          </option>
+          <option value="Spark Space">
+            Spark Space (111 Cummington Mall, RM147)
+          </option>
+          <option value="CDS">
+            College of Data Science (645 Commonwealth Av)
+          </option>
+        </select>
             <label for=" food ">Food Available</label>
-            <input class="form-box" id="form-food " type="text " id="food " name="food  " required />
+            <input class="form-box" id="form-food" type="text " id="food " name="food  " required />
             <button class="button">Send Notification</button>
         </form>
     </div>
