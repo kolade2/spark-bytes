@@ -8,12 +8,6 @@ app = Flask(__name__)
 def hello():
     return 'Hello, World!'
 
-
-# Your Account SID from twilio.com/console
-account_sid = "AC094bc9651cf72d8d19434194b5f638b7"
-# Your Auth Token from twilio.com/console
-auth_token  = "a010edbcca3a4f6fd515c69370f140f4"
-
 client = Client(account_sid, auth_token)
 
 def sendMessage(number,text):
