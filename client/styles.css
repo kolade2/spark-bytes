@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+}
+
+.img {
+    width: 100%;
+}
+
+.food-form {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
