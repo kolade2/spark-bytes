@@ -1,8 +1,8 @@
-const btn = (document.querySelector("button").disabled = true);
 const isEmpty = (str) => !str.trim().length;
+document.querySelector("button").disabled = true;
 
 document
-  .getElementById("form-location" && "form-food")
+  .getElementById("form-food" && "form-food")
   .addEventListener("input", function () {
     if (isEmpty(this.value)) {
       console.log("NAME is invalid (Empty)");
