@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from twilio.rest import Client
 
-
 app = Flask(__name__,template_folder='../client/templates')
 
 @app.route('/')
@@ -11,6 +10,10 @@ def index():
 @app.route('/landing')
 def landing():
     return render_template('landing.html')
+
+@app.route('/form')
+def form():
+    return render_template('form.html')
 
 client = Client(account_sid, auth_token)
 
