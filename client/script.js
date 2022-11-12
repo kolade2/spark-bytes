@@ -12,3 +12,13 @@ document
       document.querySelector("button").disabled = false;
     }
   });
+
+  function ValidateActinsert() {
+    var specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+    if (document.actorInsert.actInsert.value.match(specialCahrs)) {
+        alert ("Only characters A-Z, a-z and 0-9 are allowed!")
+        document.actorInsert.actInsert.focus();
+        return false;
+    }
+    return (true);
+  }
