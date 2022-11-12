@@ -5,11 +5,11 @@ This project seeks to elimiate food waste at Boston Univeristy. If there is left
 
 
 # Project Goal: 
-be able to send text messages if food is avalibale. 
-think of security --> sign up with BU email and phone number. (kerbros login) 
+By the end of BostonHacks we would like to be able to send text messages if leftover food is avalibale on campus. 
+Additionally, we want to consdier security so, we will have users sign up with BU email and phone number (kerbros login). 
 
-Nice to have:P
-range proximity --> google maps 
+# Nice to have:
+A nice to have feature includes adding a range proximity (google maps API) to be able to send texts out to those who are in the surrounding area.  
 
 
 
